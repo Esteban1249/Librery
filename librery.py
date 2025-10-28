@@ -36,16 +36,15 @@ def validar_formulario():
         print(f"Fecha de Nacimiento: {fecha_nac}")
         print(f"Teléfono: {telefono}")
 
-# Crear la ventana principal
 ventana = tk.Tk()
 ventana.title("Formulario de Registro")
 ventana.geometry("400x300")
 
-# Configurar grid
+
 ventana.columnconfigure(0, weight=1)
 ventana.columnconfigure(1, weight=3)
 
-# Etiquetas y campos de entrada
+
 tk.Label(ventana, text="Nombre:").grid(row=0, column=0, padx=5, pady=5, sticky="e")
 entry_nombre = tk.Entry(ventana)
 entry_nombre.grid(row=0, column=1, padx=5, pady=5, sticky="we")
@@ -62,9 +61,10 @@ tk.Label(ventana, text="Teléfono:").grid(row=3, column=0, padx=5, pady=5, stick
 entry_telefono = tk.Entry(ventana)
 entry_telefono.grid(row=3, column=1, padx=5, pady=5, sticky="we")
 
-# Botón de envío
+
 btn_enviar = tk.Button(ventana, text="Enviar", command=validar_formulario)
 btn_enviar.grid(row=4, column=1, pady=10, sticky="e")
 
-# Ejecutar la aplicación
+
 ventana.mainloop()
+
